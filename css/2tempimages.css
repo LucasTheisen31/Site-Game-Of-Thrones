@@ -1,0 +1,306 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Source Sans Pro;
+}
+
+body {
+    background-color: #1c2128;
+}
+
+header#cabecalho1 {
+    display: block;
+    height: 250px;
+    text-align: center;
+    background-color: black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header#cabecalho1 img {
+    padding-top: 20px;
+    width: 800px;
+    height: 150px;
+    text-align: center;
+}
+
+/* Menu de navegação */
+.navbar {
+    /* hidden- O estouro é cortado e o restante do conteúdo ficará invisível */
+    overflow: hidden;
+    /* overflow controla o que acontece com o conteúdo grande demais para caber em uma área. */
+    background-color: #2d333b;
+}
+
+/* Itens do menu navbar*/
+.navbar a {
+    float: left;
+    font-size: 17px;
+    color: whitesmoke;
+    /* cor do texto */
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Sub menu */
+.subnav {
+    float: left;
+    /* hidden- O estouro é cortado e o restante do conteúdo ficará invisível */
+    overflow: hidden;
+    /* overflow controla o que acontece com o conteúdo grande demais para caber em uma área. */
+}
+
+/* sub menu e botoes do sub menu */
+.subnav .subnavbtn {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: whitesmoke;
+    /* cor do texto */
+    padding: 14px 16px;
+    background-color: #2d333b;
+    font-family: Source Sans Pro;
+    margin: 0;
+}
+
+/* cor de fundo aos links de navegação ao passar o mouse navbar (munu principal)*/
+.navbar a:hover, .subnav:hover .subnavbtn {
+    background-color: #1c77ca;
+}
+  
+/* Estilo do conteúdo do subnav (sub menu) - posicionado absoluto */
+.subnav-conteudo {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: #1c77ca;
+    width: 100%;
+    z-index: 1;
+}
+
+/* Estilo dos links do subnav (sub menu) */
+.subnav-conteudo a {
+    float: left;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+/* Adicione uma cor de fundo cinza ao passar o mouse nos link do subnav (sub mnu) */
+.subnav-conteudo a:hover {
+    background-color: whitesmoke;
+    /* cor de fundo */
+    color: black;
+    /* cor do texto */
+}
+
+/* Ao mover o mouse sobre o contêiner de subnav, abra o conteúdo da subnav (subnav-conteudo) */
+.subnav:hover .subnav-conteudo {
+    display: block;
+}
+
+
+section#corpo {
+    margin-top: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/* estilo do aside id=esquerda */
+aside#esquerda {
+    display: block;
+    width: 18%;
+    /*largura 18% da pagina*/
+    height: 100%;
+    /*altura 100% da pagina disponivel*/
+    /*alinha o aside a esquerda*/
+    float: left;
+    
+    
+}
+
+/* estilo dos itens do menu */
+aside#esquerda a{
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+	font-family: Source Sans Pro;
+    color: #818181;
+    display: block;
+}
+
+/* efeito ao passar o mause em cima dos itens do menu*/
+aside#esquerda  a:hover {
+    color: whitesmoke;
+}
+
+aside#esquerda h2 {
+    text-align: center;
+    background-color: #123155;
+    color: whitesmoke;
+    height: 30px;
+}
+
+/*posicionando a imagem do aside esquerda*/
+aside#esquerda img {
+    text-align: left;
+    width: 100%;
+    /*100% da largura do aside*/
+    height: 100%;
+    /*100% da altura do aside*/
+}
+
+footer#rodape {
+    position: relative;
+    clear: both;
+    margin-top: 20px;
+    padding-top: 20px;
+    height: 120px;
+    background-color: #2d333b;
+    /*cor de fundo*/
+    color: white;
+    /*cor do texto*/
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+footer#rodape img {
+    padding-left: 2%;
+    float: left;
+    height: 70px;
+    width: 20%;
+}
+
+p#rod {
+    padding-right: 2%;
+    text-align: right;
+    font-size: 17px;
+    font-family: Source Sans Pro;
+}
+
+section#direita {
+    display: block;
+    float: right;
+    width: 80%;
+    margin-right: 20px;
+}
+
+section#direita h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    color: whitesmoke;
+    padding-bottom: 20px;
+}
+
+section#direita h2{
+    text-align: left;
+    font-weight: bold;
+    font-size: 25px;
+    color: whitesmoke;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+section#direita p {
+    color: #f1f1f1;
+    font-size: 17px;
+    font-family: Source Sans Pro;
+    text-align: justify;
+    text-indent: 1.5em
+}
+
+ul{
+	width: 100%;
+	margin: auto;
+	padding: 50px;
+	list-style: none;
+}
+
+li.img{
+	margin: 4px;
+	display: block;
+	float: left;
+	width: 260px;
+	height: 260px;
+	border: 1px solid white;
+	box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+	-webkit-transition: all 0.2s ease-in;
+}
+/* efeito ao passar o mause sobre a imagen */
+li.img:hover{
+	-webkit-transform: scale(1.2);
+}
+
+li#foto1{
+	background: url("2tempimg/img1.jpg");
+	background-size: 260px 260px;
+}
+
+li#foto2{
+	background: url("2tempimg/img2.jpg");
+	background-size: 260px 260px;
+}
+
+li#foto3{
+	background: url("2tempimg/img3.jpg");
+	background-size: 260px 260px;
+}
+
+li#foto4{
+	background: url("2tempimg/img4.jpg");
+	background-size: 260px 260px;
+}
+
+li#foto5{
+	background: url("2tempimg/img5.jpg");
+	background-size: 260px 260px;
+}
+
+li#foto6{
+	background: url("2tempimg/img6.jpg");
+	background-size: 260px 260px;
+}
+
+li#foto7{
+	background: url("2tempimg/img7.jpg");
+	background-size: 260px 260px;
+}
+
+li#foto8{
+	background: url("2tempimg/img8.jpg");
+	background-size: 260px 260px;
+}
+
+li#foto9{
+	background: url("2tempimg/img9.jpg");
+	background-size: 260px 260px;
+}
+
+li#foto10{
+	background: url("2tempimg/img10.jpg");
+	background-size: 260px 260px;
+}
+
+li#foto11{
+	background: url("2tempimg/img11.jpg");
+	background-size: 260px 260px;
+}
+
+li#foto12{
+	background: url("2tempimg/img12.jpg");
+	background-size: 260px 260px;
+}
+
+li#foto13{
+	background: url("2tempimg/img13.jpg");
+	background-size: 260px 260px;
+}
+
+li#foto14{
+	background: url("2tempimg/img14.jpg");
+	background-size: 260px 260px;
+}
+

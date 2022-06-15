@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Source Sans Pro;
+    color: #323232; /* cor to texto */
+    border: none;
+}
+
+body {
+    background-color: #1c2128;
+}
+
+header#cabecalho1 {
+    display: block;
+    height: 250px;
+    text-align: center;
+    background-color: black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header#cabecalho1 img {
+    padding-top: 20px;
+    width: 800px;
+    height: 150px;
+    text-align: center;
+}
+
+/* Menu de navegação */
+.navbar {
+    /* hidden- O estouro é cortado e o restante do conteúdo ficará invisível */
+    overflow: hidden;
+    /* overflow controla o que acontece com o conteúdo grande demais para caber em uma área. */
+    background-color: #2d333b;
+}
+
+/* Itens do menu navbar*/
+.navbar a {
+    float: left;
+    font-size: 17px;
+    color: whitesmoke;
+    /* cor do texto */
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Sub menu */
+.subnav {
+    float: left;
+    /* hidden- O estouro é cortado e o restante do conteúdo ficará invisível */
+    overflow: hidden;
+    /* overflow controla o que acontece com o conteúdo grande demais para caber em uma área. */
+}
+
+/* sub menu e botoes do sub menu */
+.subnav .subnavbtn {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: whitesmoke;
+    /* cor do texto */
+    padding: 14px 16px;
+    background-color: #2d333b;
+    font-family: Source Sans Pro;
+    margin: 0;
+    cursor: pointer;/* quando passa o cursor em cima vira uma mão */
+}
+
+/* cor de fundo aos links de navegação ao passar o mouse navbar (munu principal)*/
+.navbar a:hover,
+.subnav:hover .subnavbtn {
+    background-color: #1c77ca;
+}
+
+/* Estilo do conteúdo do subnav (sub menu) - posicionado absoluto */
+.subnav-conteudo {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: #1c77ca;
+    width: 100%;
+    z-index: 1;
+}
+
+/* Estilo dos links do subnav (sub menu) */
+.subnav-conteudo a {
+    float: left;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+/* Adicione uma cor de fundo cinza ao passar o mouse nos link do subnav (sub mnu) */
+.subnav-conteudo a:hover {
+    background-color: whitesmoke;
+    /* cor de fundo */
+    color: black;
+    /* cor do texto */
+}
+
+/* Ao mover o mouse sobre o contêiner de subnav, abra o conteúdo da subnav (subnav-conteudo) */
+.subnav:hover .subnav-conteudo {
+    display: block;
+}
+
+/* ------------- corpo ------------ */
+
+input, label{
+    display: block; /* somente um vai ocupar uma linha  */
+    width: 100%;/* largura */
+}
+
+label{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+input{
+    border-bottom: 2px solid #323232;
+    padding: 10px;
+    font-size: 17px;
+    margin-bottom: 40px;
+}
+
+/* quando focar(clicar) no campo input */
+input:focus{
+    border-color: #1c77ca;
+}
+
+input:focus, label:focus{
+    outline: none;/* tira o efeito de selecionar */
+}
+
+fieldset p {
+    padding: 10px;
+}
+
+section#corpo {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+    
+}
+
+section#corpo h1{
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.full-box{
+    flex: 1 1 100%;
+    position: relative;
+}
+
+.half-box{
+    flex: 1 1 45%;
+    position: relative;
+}
+
+.spacing{
+    margin-right: 2.5%;
+}
+
+/* Estilo do botao */
+input[type="submit"] {
+    height: 40px;
+    font-size: 17;
+    color: whitesmoke;
+    background-color: #2d333b;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;/* quando passa o cursor em cima vira uma mão */
+}
+
+/* Efeito ao passar o mause em cima do botao */
+input:hover[type="submit"] {
+    background: #1c77ca;/* Cor de fundo do botao */
+    color: whitesmoke;/* Cor do texto do botao */
+}
+
+
+.error-validation{
+    color: #ff1A1A;
+    position: absolute;
+    top: 57px;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.template{
+    display: none;
+}
+
+/* ------------- rodape ------------ */
+footer#rodape {
+    position: relative;
+    clear: both;
+    margin-top: 20px;
+    padding-top: 20px;
+    height: 120px;
+    background-color: #2d333b;
+    /*cor de fundo*/
+    color: white;
+    /*cor do texto*/
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+footer#rodape img {
+    padding-left: 2%;
+    float: left;
+    height: 70px;
+    width: 20%;
+}
+
+p#rod {
+    padding-right: 2%;
+    text-align: right;
+    font-size: 17px;
+    font-family: Source Sans Pro;
+}

@@ -47,7 +47,7 @@ var list = [];
         saida.push(
             `<div>
                 <div value="${e.nome}">
-                    <label>${e.nome.value}<label>
+                    <label>${e.nome}<label>
                 </div>
              </div>`
           );

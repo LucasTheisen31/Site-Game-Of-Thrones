@@ -48,6 +48,7 @@ var list = [];
             `<div>
                 <div value="${e.nome}">
                     <label>${e.nome}<label>
+                    <label>${e.email}<label>
                 </div>
              </div>`
           );

@@ -228,6 +228,27 @@ section#direita img {
     width: 50%;
 }
 
+.comentarios-container{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* superior | direita | inferior | esquerda */
+    padding: 5px 10px 10px 10px;/* espaçamento interno*/
+    border-radius: 8px;
+    border: 2px solid;
+    border-color: #c0c0c0;
+    display: block;
+    text-align: left;
+    background-color: #5d5e63;
+}
+
+.comentarios-container h2{
+
+}
+
+.comentarios-container:hover{
+    border-color: #1c77ca;
+}
+
 form#formCom{
     width: 100%;
 }
@@ -239,10 +260,12 @@ form#formCom h2{
 .fildset-comentario{
     margin-top: 10px;
     /* superior | direita | inferior | esquerda */
-    padding: 5px;
+    padding: 5px 10px 10px 10px;/* espaçamento interno*/
     border-radius: 8px;
-    text-align: center;
+    border: 2px solid;
+    border-color: #c0c0c0;
     background-color: #5d5e63;
+    text-align: center;
 }
 
 .fildset-comentario:hover{
@@ -284,7 +307,7 @@ form#formCom h2{
 }
 
 
-input[type="submit"] {
+input[type="button"] {
     height: 40px;
     font-size: 17px;
     color: whitesmoke;
@@ -298,7 +321,7 @@ input[type="submit"] {
 }
 
 /* Efeito ao passar o mause em cima do botao */
-input:hover[type="submit"] {
+input:hover[type="button"] {
     background: #1c77ca;/* Cor de fundo do botao */
     color: whitesmoke;/* Cor do texto do botao */
 }

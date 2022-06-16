@@ -46,9 +46,9 @@ var list = [];
     list.forEach((e) => {
         saida.push(
             `<div>
-                <div value="${e.nome}">
-                    <label>${e.nome}<label>
-                    <label>${e.email}<label>
+                <div class="comentario">
+                    <div class="dados-autor-comentario"><b>Nome</b>: ${e.nome}<b> Email</b>: ${e.email} <b>Gênero:</b> ${e.sexo}</div>
+                    <div class="texto-comentario"><b>Comentou:</b>${e.comentario}</div>
                 </div>
              </div>`
           );
@@ -56,7 +56,7 @@ var list = [];
     );
     
     //document.getElementById ("form_quest").innerHTML = html;
-    document.getElementById('comentarios').innerHTML = saida;
+    document.getElementById('comentarios').innerHTML = saida.join('');
 
  }
 // 

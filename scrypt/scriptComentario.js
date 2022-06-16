@@ -1,46 +1,83 @@
 
-const formCom = document.getElementById('formCom');
-
-
 var list = [];
 
- function regComentario(){
-    var nome = document.getElementById('nome');
-    var email = document.getElementById('email');
-    var comentario = document.getElementById('textarea');
-    var sexo = document.getElementById('sexo');
-    var notifEmail = document.getElementById('checkbox');
+//obter o endereço da página atual (URL) após o / ex: /1temporada.html
+var dir = window.location.pathname;
 
-    var dados = JSON.parse(localStorage.getItem('comentarios'));
+//se tiver comentários armazenados localmente armazena eles na list, caso contrario retorna '[]' 
+var list = JSON.parse(localStorage.getItem('comentarios' + dir) ?? '[]');
+
+//chama a função para mostrar os comentários ja armazenados
+mostrarComent();
+
+//funcao para salvar os comentarios
+function salvarComentario() {
+
+    const formCom = document.getElementById('formCom');
+
+    var comentario = document.formCom.textarea;
+    if (comentario.value == '' || comentario.value.length < 2) {
+        comentario.focus();
+        return;
+    }
+
+    var nome = document.formCom.nome;
+    if (nome.value == '' || nome.value.length < 2) {
+        nome.focus();
+        return;
+    }
+
+    var email = document.formCom.email;
+    if (email.value == '' || !validateEmail(email.value)) {
+        email.focus();
+        return;
+    }
+
+    function validateEmail(email) {
+        var re = /\S+@\S+\.\S+/;
+        return re.test(email);
+    }
+
+    var sexo = document.formCom.sexo;
+    if (sexo.value == '') {
+        sexo.focus();
+        return;
+    }
+
+    
+
+    var notifEmail = document.formCom.checkbox;
 
     var checkboxNotificarEmail = false;
 
-    if(notifEmail.checked){
+    if (notifEmail.checked) {
         checkboxNotificarEmail = true;
     }
 
     var dadosComentario = {
-         comentario: comentario.value,
-         nome : nome.value,
-         email : email.value,
-         sexo : sexo.value,
-         checkboxNotificarEmail : checkboxNotificarEmail
+        comentario: comentario.value,
+        nome: nome.value,
+        email: email.value,
+        sexo: sexo.value,
+        checkboxNotificarEmail: checkboxNotificarEmail
     }
 
-    //dados.push(dadosComentario);
-    
-    // localStorage.setItem('comentarios', JSON.stringify(dados));
-    //alert('Comentário Registrado');
-
-    //console.log(localStorage);
-
-
+    //adiciona o coomentario em uma lista de comentarios
     list.push(dadosComentario);
+
+    //armazena o comentario no localStorage -> comentario+caminhododiretorio
+    localStorage.setItem('comentarios' + dir, JSON.stringify(list));
 
     alert('Comentário Registrado');
 
     console.log(list);
 
+    //chama a função para mostrar os comentários armazenados
+    mostrarComent();
+
+}
+
+function mostrarComent() {
     let saida = [];
 
     list.forEach((e) => {
@@ -51,25 +88,9 @@ var list = [];
                     <div class="texto-comentario"><b>Comentou:</b>${e.comentario}</div>
                 </div>
              </div>`
-          );
-        }
+        );
+    }
     );
     document.getElementById('titulo-comentarios-container').innerHTML = `<h2>Comentários: ${list.length}</h2>`
     document.getElementById('comentarios').innerHTML = saida.join('');
-
- }
-// 
-//  const inputName = document.querySelector('input[name="name"]');
-// 	const inputEmail = document.querySelector('input[name="email"]');
-
-// 	const log = document.getElementById('log');
-
-// 	//input.addEventListener('change', updateValue);
-
-// 	function updateValue() {
-// 	  //log.textContent = e.target.value;
-	  
-// 	  let p = { nome: inputName.value, email: inputEmail.value };
-// 	  list.push(p);
-// 	  console.log(list);
-// 	}
+}

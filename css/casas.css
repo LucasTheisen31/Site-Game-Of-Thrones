@@ -245,6 +245,12 @@ section#direita img {
     border-color: #1c77ca;
 }
 
+/* .titulo-comentarios-container{
+    color: whitesmoke;
+    font-size: 20px;
+    font-weight: bold;
+} */
+
 form#formCom{
     width: 100%;
 }
@@ -278,8 +284,8 @@ form#formCom h2{
     padding: 10px;
 }
 
-.dados-autor-comentario{
-    
+div#numero-comentarios{
+    display: inline;
 }
 
 .campo label{

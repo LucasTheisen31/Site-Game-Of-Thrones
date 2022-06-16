@@ -54,8 +54,7 @@ var list = [];
           );
         }
     );
-    
-    //document.getElementById ("form_quest").innerHTML = html;
+    document.getElementById('titulo-comentarios-container').innerHTML = `<h2>Comentários: ${list.length}</h2>`
     document.getElementById('comentarios').innerHTML = saida.join('');
 
  }

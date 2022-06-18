@@ -212,95 +212,31 @@ section#direita p {
     text-indent: 1.5em
 }
 
-ul{
-	width: 100%;
-	margin: auto;
-	padding: 50px;
-	list-style: none;
+.container_imagem_grande{
+    width: 100%;
+    height: 38rem;
+}
+.container_imagem_grande img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
-li.img{
-	margin: 4px;
-	display: block;
-	float: left;
-	width: 260px;
-	height: 260px;
-	border: 1px solid white;
-	box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-	-webkit-transition: all 0.2s ease-in;
+.container_imagens_pequenas{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
+.container_imagens_pequenas img{
+    width: 9rem;
+    height: 7rem;
+    object-fit: cover;
+    cursor: pointer;
+    margin:0.4rem;
+}
+
 /* efeito ao passar o mause sobre a imagen */
-li.img:hover{
+.container_imagens_pequenas img:hover{
 	-webkit-transform: scale(1.2);
-}
-
-li#foto1{
-	background: url("2tempimg/img1.jpg");
-	background-size: 260px 260px;
-}
-
-li#foto2{
-	background: url("2tempimg/img2.jpg");
-	background-size: 260px 260px;
-}
-
-li#foto3{
-	background: url("2tempimg/img3.jpg");
-	background-size: 260px 260px;
-}
-
-li#foto4{
-	background: url("2tempimg/img4.jpg");
-	background-size: 260px 260px;
-}
-
-li#foto5{
-	background: url("2tempimg/img5.jpg");
-	background-size: 260px 260px;
-}
-
-li#foto6{
-	background: url("2tempimg/img6.jpg");
-	background-size: 260px 260px;
-}
-
-li#foto7{
-	background: url("2tempimg/img7.jpg");
-	background-size: 260px 260px;
-}
-
-li#foto8{
-	background: url("2tempimg/img8.jpg");
-	background-size: 260px 260px;
-}
-
-li#foto9{
-	background: url("2tempimg/img9.jpg");
-	background-size: 260px 260px;
-}
-
-li#foto10{
-	background: url("2tempimg/img10.jpg");
-	background-size: 260px 260px;
-}
-
-li#foto11{
-	background: url("2tempimg/img11.jpg");
-	background-size: 260px 260px;
-}
-
-li#foto12{
-	background: url("2tempimg/img12.jpg");
-	background-size: 260px 260px;
-}
-
-li#foto13{
-	background: url("2tempimg/img13.jpg");
-	background-size: 260px 260px;
-}
-
-li#foto14{
-	background: url("2tempimg/img14.jpg");
-	background-size: 260px 260px;
 }
 

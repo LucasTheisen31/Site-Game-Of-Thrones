@@ -70,7 +70,7 @@ header#cabecalho1 img {
 .navbar a:hover, .subnav:hover .subnavbtn {
     background-color: #1c77ca;
 }
-  
+
 /* Estilo do conteúdo do subnav (sub menu) - posicionado absoluto */
 .subnav-conteudo {
     display: none;
@@ -117,8 +117,8 @@ aside#esquerda {
     /*altura 100% da pagina disponivel*/
     /*alinha o aside a esquerda*/
     float: left;
-    
-    
+
+
 }
 
 /* estilo dos itens do menu */
@@ -183,10 +183,8 @@ p#rod {
 
 section#direita {
     display: block;
-    float: right;
     text-align: center;
-    width: 80%;
-    margin-right: 20px;
+    width: 100%;
 }
 
 section#direita h1{
@@ -194,7 +192,7 @@ section#direita h1{
     font-weight: bold;
     font-size: 30px;
     color: whitesmoke;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 section#direita h2{
@@ -202,19 +200,12 @@ section#direita h2{
     font-weight: bold;
     font-size: 25px;
     color: whitesmoke;
-    padding-top: 10px;
+    padding-top: 20px;
     padding-bottom: 10px;
-}
-
-section#direita p {
-    color: whitesmoke;
-    font-size: 17px;
-    font-family: Source Sans Pro;
-    text-align: justify;
-    text-indent: 1.5em
 }
 
 section#direita iframe{
     width: 480px;
     height: 360px;
 }
+
